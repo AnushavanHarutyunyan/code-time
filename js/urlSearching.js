@@ -1,6 +1,7 @@
-let url = window.location.href;
 //Եթե ներքևի url կոմենտից հանենք alert-ը կտեսնենք,այս պահին չի աշխատում որովհետև url-ը local է
-//let url = new URL('http://local.ru/?callback=1'); 
+// let url = new URL('http://local.ru/?callback=1'); 
+let url = new URL(window.location.href); 
+
 let params = new URLSearchParams(url.search.slice(1));
 
 if(params.has('callback')){
